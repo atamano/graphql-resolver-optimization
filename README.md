@@ -1,6 +1,9 @@
 # Graphql Resolver Optimization
 
-This is a repository example of resolvers optimization in GraphQL to avoid overfetching.
+Purpose of this repository is to provide an example of resolvers optimization in GraphQL to avoid overfetching.
+
+- Usage of "field resolvers" allowing resolvers to fetch only what is necessary
+- Implementation of the facebook dataloder library to cope with the N+1 problem
 
 ## Setup
 
@@ -9,7 +12,7 @@ $ yarn install
 $ yarn dev
 ```
 
-=> go to `http://localhost:/8080/graphql`
+go to http://localhost:8080/graphql
 
 ## Example 1
 
@@ -28,7 +31,11 @@ query {
 }
 ```
 
-This query should never fetch `/users` endpoint, only one endpoint is called to get user cars.
+This query should end up in only 1 API call:
+
+```
+/users/2/cars
+```
 
 ## Example 2
 
@@ -80,4 +87,4 @@ This query should end up in only 2 API calls:
 /users/1/cars
 ```
 
-You can find all query examples in `exemples` directory.
+You can find query examples in `examples` directory.

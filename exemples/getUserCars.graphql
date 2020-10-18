@@ -1,0 +1,12 @@
+# This query should never fetch user
+
+query {
+  user(id: 2) {
+    id
+    cars {
+      id
+      model
+      registration_plate
+    }
+  }
+}

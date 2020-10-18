@@ -1,0 +1,14 @@
+# this query should call cars fallback
+
+query {
+  user(id: 3) {
+    id
+    firstName
+    lastName
+    cars {
+      id
+      model
+      registration_plate
+    }
+  }
+}

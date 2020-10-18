@@ -1,0 +1,14 @@
+# This query should fetch cars in batch
+
+query {
+  users {
+    id
+    firstName
+    lastName
+    cars {
+      id
+      model
+      registration_plate
+    }
+  }
+}

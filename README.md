@@ -31,7 +31,7 @@ query {
 }
 ```
 
-This query should end up in only 1 API call:
+This query trigger only 1 API call:
 
 ```
 /users/2/cars
@@ -55,7 +55,7 @@ query {
 
 ```
 
-This query should end up in only 2 API calls:
+This query should trigger 2 API calls:
 
 ```
 /users
@@ -80,7 +80,7 @@ query {
 
 ```
 
-This query should end up in only 2 API calls:
+This query should trigger only 2 API calls:
 
 ```
 /users?ids[]=1

@@ -21,7 +21,7 @@ export const User = objectType({
       resolve: createFieldResolver('firstName', resolverCallBack),
     });
     t.string('lastName', {
-      resolve: createFieldResolver('firstName', resolverCallBack),
+      resolve: createFieldResolver('lastName', resolverCallBack),
     });
     t.list.field('cars', {
       type: Car,

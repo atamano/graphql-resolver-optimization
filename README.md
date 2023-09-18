@@ -31,7 +31,7 @@ query {
 }
 ```
 
-This query trigger only 1 API call:
+This query should trigger only 1 API call:
 
 ```
 /users/2/cars
